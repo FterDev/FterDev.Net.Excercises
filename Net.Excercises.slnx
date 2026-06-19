@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/Easy/">
+    <Project Path="Easy/ArrayMaxFinder.Tests/ArrayMaxFinder.Tests.csproj" />
     <Project Path="Easy/ArrayMaxFinder/ArrayMaxFinder.csproj" />
   </Folder>
 </Solution>
