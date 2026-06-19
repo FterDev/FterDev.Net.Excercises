@@ -9,7 +9,7 @@ public class ArrayMaxFinder
         
 
         if(nums.Length == 0)
-            throw new Exception("No elements in array");
+            throw new ArgumentException("No elements in array");
 
         int currentMax = nums[0];
 
@@ -30,10 +30,10 @@ public class ArrayMaxFinder
 
 
         if(nums.Length == 0)
-            throw new Exception("No elements in array");
+            throw new ArgumentException("No elements in array");
 
         if(nums.Length == 1)
-            throw new Exception("Only one element in array");
+            throw new ArgumentException("Only one element in array");
         
 
         int currentMax = 0;

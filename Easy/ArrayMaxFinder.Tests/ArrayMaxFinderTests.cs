@@ -41,6 +41,18 @@ public class ArrayMaxFinderTests
     }
 
     [Fact]
+    public void FindMax_EmptyGiven_ShoulddReturnFirst()
+    {
+        int[] nums = [];
+        
+        var arrayMaxFinder = new ArrayMaxFinder();
+
+        Assert.Throws<ArgumentException>(() => arrayMaxFinder.FindMax(nums));
+
+        
+    }
+
+    [Fact]
     public void FindMax_AllIdentical_ShoulddReturnTheIdentical()
     {
         int[] nums = [6, 6, 6, 6, 6];
@@ -157,6 +169,16 @@ public class ArrayMaxFinderTests
 
         var arrayMaxFinder = new ArrayMaxFinder();
 
-        Assert.Throws<Exception>(() => arrayMaxFinder.FindTopTwo(nums));
+        Assert.Throws<ArgumentException>(() => arrayMaxFinder.FindTopTwo(nums));
+    }
+
+    [Fact]
+    public void FindTopTwo_EmptyGiven_ShouldThrow()
+    {
+        int[] nums = [];
+
+        var arrayMaxFinder = new ArrayMaxFinder();
+
+        Assert.Throws<ArgumentException>(() => arrayMaxFinder.FindTopTwo(nums));
     }
 }
