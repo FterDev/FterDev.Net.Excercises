@@ -7,16 +7,16 @@ public static class Program
     {
 
 
-        int num = 100;
+        int num = 10000000;
         Dictionary<int, string> rules = new Dictionary<int, string>
         {
             {3, "Fizz"},
             {5, "Buzz"}
         };
 
-        var list = FizzBuzzGeneral(num, rules);
         
-        PrintFizzBuzz(list);
+        
+        PrintFizzBuzz(FizzBuzzGeneral(num, rules));
 
         return Task.CompletedTask;
     }
@@ -48,7 +48,7 @@ public static class Program
         return list;
     }
 
-    public static List<string> FizzBuzzGeneral(int n, Dictionary<int, string> rules)
+    public static IEnumerable<string> FizzBuzzGeneral(int n, Dictionary<int, string> rules)
     {
         RuleCheck(rules);
         var list = new List<string>();
@@ -67,13 +67,13 @@ public static class Program
                 }
             }
 
-            list.Add(ruleTriggered ? word : i.ToString());
+            yield return ruleTriggered ? word : i.ToString();
         }
 
-        return list;
+        
     }
 
-    private static void PrintFizzBuzz(List<string> list)
+    private static void PrintFizzBuzz(IEnumerable<string> list)
     {
         foreach(string e in list)
             Console.WriteLine(e);
