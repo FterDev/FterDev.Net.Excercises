@@ -53,11 +53,67 @@ public class ArrayMaxFinderTests
     }
 
     [Fact]
+    public void FindTopTwo_FiveGivenfirstBiggest_ShoulddReturnTheTopTwo()
+    {
+        int[] nums = [10, 5, 1, 9, 3];
+        int expectedMax = 10;
+        int expectedSecond = 9;
+
+        var arrayMaxFinder = new ArrayMaxFinder();
+        (var max, var second) = arrayMaxFinder.FindTopTwo(nums);
+
+        Assert.Equal(expectedMax, max);
+        Assert.Equal(expectedSecond, second);
+    }
+
+    [Fact]
+    public void FindTopTwo_FiveGivenLastBiggest_ShoulddReturnTheTopTwo()
+    {
+        int[] nums = [10, 5, 15, 9, 13];
+        int expectedMax = 15;
+        int expectedSecond = 13;
+
+        var arrayMaxFinder = new ArrayMaxFinder();
+        (var max, var second) = arrayMaxFinder.FindTopTwo(nums);
+
+        Assert.Equal(expectedMax, max);
+        Assert.Equal(expectedSecond, second);
+    }
+
+    [Fact]
+    public void FindTopTwo_FirstSmallest_ShoulddReturnTheTopTwo()
+    {
+        int[] nums = [1, 2, 3, 4, 5];
+        int expectedMax = 5;
+        int expectedSecond = 4;
+
+        var arrayMaxFinder = new ArrayMaxFinder();
+        (var max, var second) = arrayMaxFinder.FindTopTwo(nums);
+
+        Assert.Equal(expectedMax, max);
+        Assert.Equal(expectedSecond, second);
+    }
+
+    [Fact]
+    public void FindTopTwo_SecondSmallest_ShoulddReturnTheTopTwo()
+    {
+        int[] nums = [5, 1, 2, 3, 4];
+        int expectedMax = 5;
+        int expectedSecond = 4;
+
+        var arrayMaxFinder = new ArrayMaxFinder();
+        (var max, var second) = arrayMaxFinder.FindTopTwo(nums);
+
+        Assert.Equal(expectedMax, max);
+        Assert.Equal(expectedSecond, second);
+    }
+
+    [Fact]
     public void FindTopTwo_FiveGiven_ShoulddReturnTheTopTwo()
     {
-        int[] nums = [6, 9, 2, 0, 1];
-        int expectedMax = 9;
-        int expectedSecond = 6;
+        int[] nums = [1, 2, 1, 1, 1];
+        int expectedMax = 2;
+        int expectedSecond = 1;
 
         var arrayMaxFinder = new ArrayMaxFinder();
         (var max, var second) = arrayMaxFinder.FindTopTwo(nums);
