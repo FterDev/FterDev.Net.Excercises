@@ -60,9 +60,47 @@ public class ArrayMaxFinderTests
         int expectedSecond = 6;
 
         var arrayMaxFinder = new ArrayMaxFinder();
-        (var max, var second) = arrayMaxFinder.FinddTopTwo(nums);
+        (var max, var second) = arrayMaxFinder.FindTopTwo(nums);
 
         Assert.Equal(expectedMax, max);
         Assert.Equal(expectedSecond, second);
+    }
+
+    [Fact]
+    public void FindTopTwo_FiveGivenNeg_ShoulddReturnTheTopTwo()
+    {
+        int[] nums = [-6, -9, -2, 0, 1];
+        int expectedMax = 1;
+        int expectedSecond = 0;
+
+        var arrayMaxFinder = new ArrayMaxFinder();
+        (var max, var second) = arrayMaxFinder.FindTopTwo(nums);
+
+        Assert.Equal(expectedMax, max);
+        Assert.Equal(expectedSecond, second);
+    }
+
+    [Fact]
+    public void FindTopTwo_AllIdentical_ShoulddReturnTheTopTwo()
+    {
+        int[] nums = [5,5,5];
+        int expectedMax = 5;
+        int expectedSecond = 5;
+
+        var arrayMaxFinder = new ArrayMaxFinder();
+        (var max, var second) = arrayMaxFinder.FindTopTwo(nums);
+
+        Assert.Equal(expectedMax, max);
+        Assert.Equal(expectedSecond, second);
+    }
+
+    [Fact]
+    public void FindTopTwo_OneGiven_ShouldThrow()
+    {
+        int[] nums = [1];
+
+        var arrayMaxFinder = new ArrayMaxFinder();
+
+        Assert.Throws<Exception>(() => arrayMaxFinder.FindTopTwo(nums));
     }
 }
