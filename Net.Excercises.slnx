@@ -2,6 +2,8 @@
   <Folder Name="/Easy/">
     <Project Path="Easy/ArrayMaxFinder.Tests/ArrayMaxFinder.Tests.csproj" />
     <Project Path="Easy/ArrayMaxFinder/ArrayMaxFinder.csproj" />
+    <Project Path="Easy/FizzBuzz.Tests/FizzBuzz.Tests.csproj" />
+    <Project Path="Easy/FizzBuzz/FizzBuzz.csproj" />
     <Project Path="Easy/StringReverser.Tests/StringReverser.Tests.csproj" />
     <Project Path="Easy/StringReverser/StringReverser.csproj" />
   </Folder>
