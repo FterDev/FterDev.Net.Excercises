@@ -1,4 +1,4 @@
-#Find the maximum in an array
+# Find the maximum in an array
 ---
 
 Tests: Basic iteration, comparisons, off-by-one mistakes
