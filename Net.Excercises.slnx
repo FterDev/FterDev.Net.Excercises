@@ -4,6 +4,8 @@
     <Project Path="Easy/ArrayMaxFinder/ArrayMaxFinder.csproj" />
     <Project Path="Easy/FizzBuzz.Tests/FizzBuzz.Tests.csproj" />
     <Project Path="Easy/FizzBuzz/FizzBuzz.csproj" />
+    <Project Path="Easy/PalindromeChecker.Tests/PalindromeChecker.Tests.csproj" />
+    <Project Path="Easy/PalindromeChecker/PalindromeChecker.csproj" />
     <Project Path="Easy/StringReverser.Tests/StringReverser.Tests.csproj" />
     <Project Path="Easy/StringReverser/StringReverser.csproj" />
   </Folder>
