@@ -51,7 +51,6 @@ public static class Program
     public static IEnumerable<string> FizzBuzzGeneral(int n, Dictionary<int, string> rules)
     {
         RuleCheck(rules);
-        var list = new List<string>();
 
         for(int i = 1; i <= n; i++)
         {
