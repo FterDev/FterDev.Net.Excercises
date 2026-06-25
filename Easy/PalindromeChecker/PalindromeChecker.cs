@@ -6,20 +6,10 @@ public static class PalindromeChecker
     public static bool IsPalindrome(string input)
     {
         
-        
+        throw new NotImplementedException();
 
     }
 
-    private static bool ScanString()
-    {
-        
-    }
-
-    private enum Direction
-    {
-        Left = 0,
-        Right
-    }
 
 }
 
