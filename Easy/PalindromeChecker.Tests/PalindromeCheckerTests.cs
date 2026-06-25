@@ -1,6 +1,6 @@
 ﻿namespace FterDev.Easy.PalindromeChecker.Tests;
 
-public class UnitTest1
+public class PalindromeCheckerTests
 {
     [Fact]
     public void IsPalinddrome_SimplePalindromeGiven_ShouldReturnTrue()
